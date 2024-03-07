@@ -53,7 +53,7 @@ const posicaoSuperiorInicial = 70,
             leftAvatar = getLeftStyle(imgAvatar);
             if (leftAvatar < posicaoDireitaFinal) {
                 posicaoDireita += parseInt(txtPixel.value);
-                posicaoDireita = posicaoDireitaFinal;
+            if (posicaoDireita > posicaoDireitaFinal) {
             }
                 imgAvatar.style.left = posicaoDireita + "px";
             } else {
@@ -62,21 +62,22 @@ const posicaoSuperiorInicial = 70,
             console.log("Posicao de avatar a direita", imgAvatar.style.left);
         }
 
-        function moverParaBaixo() {
+       
+        function moverParaCima() {
             console.clear();
-            console.log("Posição  superior do avatar antes: ", imgAvatar.style.left);
-            leftAvatar = getLeftStyle(imgAvatar);
-            if (leftAvatar < posicaoSuperiorFinal) {
-                posicaoSuperior += parseInt(txtPixel.value);
-                posicaoSuperior > posicaoSuperFinal;
-                posicaoSuperior = posicaoSuperFinal;
+            console.log("Posição do avatar à direita antes: ", imgAvatar.style.top);
+            topAvatar = getLeftStyle(imgAvatar);
+            if (topAvatar > posicaoSuperiorInicial) {
+                posicaoSuperior = posicaoSuperiorInicial;
             }
-                imgAvatar.style.left = posicaoSuperior + "px"; 
-                
-        } else {
+                posicaoDireita += parseInt(txtPixel.value);
+            if (posicaoDireita > posicaoDireitaFinal) {
+            }
+                imgAvatar.style.left = posicaoDireita + "px";
+            } else {
                 console.error("Ops! Chegou ao limite e nao e possivel mais mover para direita. Tente outro botao");
             }
-            console.log("Posicao de avatar a direita", imgAvatar.style.top);
+            console.log("Posicao de avatar a direita", imgAvatar.style.left);
         }
         
 
