@@ -43,21 +43,42 @@ const posicaoSuperiorInicial = 70,
             } else{
                 console.error("Ops! Chegou ao limite e nao e possivel mais mover para esquerda. Tente outro botao");
             }
-            console.log("Posicao de avatar a esquerda", imgAvatar.style.left);
+            console.log("Posicao de avatar a esquerda depois: ", imgAvatar.style.left);
         }
 
         
         function moverParaDireita() {
             console.clear();
+            console.log("Posição do avatar à direita antes: ", imgAvatar.style.left);
             leftAvatar = getLeftStyle(imgAvatar);
-            if (leftAvatar >= posicaoDireitaInicial) {
-                posicaoDireitarda -= parseInt(txtPixel.value);
+            if (leftAvatar < posicaoDireitaFinal) {
+                posicaoDireita += parseInt(txtPixel.value);
+                posicaoDireita = posicaoDireitaFinal;
+            }
                 imgAvatar.style.left = posicaoDireita + "px";
-            } else{
+            } else {
                 console.error("Ops! Chegou ao limite e nao e possivel mais mover para direita. Tente outro botao");
             }
             console.log("Posicao de avatar a direita", imgAvatar.style.left);
         }
+
+        function moverParaBaixo() {
+            console.clear();
+            console.log("Posição  superior do avatar antes: ", imgAvatar.style.left);
+            leftAvatar = getLeftStyle(imgAvatar);
+            if (leftAvatar < posicaoSuperiorFinal) {
+                posicaoSuperior += parseInt(txtPixel.value);
+                posicaoSuperior > posicaoSuperFinal;
+                posicaoSuperior = posicaoSuperFinal;
+            }
+                imgAvatar.style.left = posicaoSuperior + "px"; 
+                
+        } else {
+                console.error("Ops! Chegou ao limite e nao e possivel mais mover para direita. Tente outro botao");
+            }
+            console.log("Posicao de avatar a direita", imgAvatar.style.top);
+        }
+        
 
         function girarHorario() {
             console.clear();
